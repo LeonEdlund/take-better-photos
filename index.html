@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to take photos</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script defer src="script.js"></script>
+  <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+  <div class="cursor" data-cursor></div>
+
+  <button id="volume-btn"><img id="sound" data-sound-on="true" src="img/icons/sound-on.svg" alt="sound button"></button>
+  <button id="menu-btn"><img id="menu-btn" src="img/icons/menu.svg" alt="menu button"></button>
+
+  <div class="menu-wrap">
+    <div>
+      <button id="closeMenuBtn">X</button>
+      <ul id="menu-items">
+        <li data-page-nr="1" ><a class="active-menu" href="#page1">start</a></li>
+        <li data-page-nr="2"><a href="#page2">What is a photo?</a></li>
+        <li data-page-nr="3"><a href="#page3">aperture</a></li>
+        <li data-page-nr="5"><a href="#page5">shutterspeed</a></li>
+        <li data-page-nr="7"><a href="#page7">iso</a></li>
+        <li data-page-nr="9"><a href="#page9">end</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="page1">
+    <div id="title-items">
+      <p class="title-text hidden">take</p>
+      <p class="title-text hidden">better</p>
+      <p class="title-text hidden">photos</p>
+      <div class="background-img1"></div>
+    </div>
+  </section>
+
+  <section id="page2" class="split">
+    <div class="left-content">
+      <h2 class="hidden">What is a photo?</h2>
+      <p class="big-text hidden">
+        A photo is the result of light being captured on a photo sensitive surface. In modern cameras, this is an
+        electronic sensor, while older cameras used film. The exposure of your image is controlled by how long the
+        sensor or film is exposed to light. This guide will give you a basic understanding of the three main settings of
+        a camera that effect exposure: aperture, shutter speed, and ISO. Together, these form the Exposure Triangle,
+        each setting interacts with the others to balance the light captured, ensuring your photos are well-exposed.
+      </p>
+    </div>
+    <div class="right-content">
+      <img src="img/camera.jpg" alt="placeholder">
+    </div>
+  </section>
+
+  <section id="page3" class="split">
+    <div class="left-content">
+      <h2 class="hidden">Aperture</h2>
+      <p class="big-text hidden">
+        Aperture, the opening in a camera lens, controls light entry and depth of field: a large aperture (small f-stop
+        number) allows more light and creates a shallow depth of field, ideal for highlighting subjects with blurred
+        backgrounds; a medium aperture offers a balance, suitable for general photography with moderately focused
+        backgrounds; and a small aperture (large f-stop number) limits light entry but provides a deep depth of field,
+        perfect for detailed landscape shots.
+      </p>
+      <p class="figcap hidden">Use the buttons on the right to change the aperture.</p>
+    </div>
+    <div class="right-content slider">
+      <img id="aperture-img" src="img/aperture-1.jpg" alt="placeholder">
+      <div class="slider-buttons aperture-group">
+        <button class="aperture-button active-shutter" data-img-src="img/aperture-1.jpg"><img src="img/icons/aperture-ring-1.svg"
+            alt="aperture ring"></button>
+        <button class="aperture-button" data-img-src="img/aperture-2.jpg"><img src="img/icons/aperture-ring-2.svg"
+            alt="aperture ring"></button>
+        <button class="aperture-button" data-img-src="img/aperture-3.jpg"><img src="img/icons/aperture-ring-3.svg"
+            alt="aperture ring"></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="page4" class="test">
+    <h2 class="titel-center hidden">low or high aperture?</h2>
+    <img src="img/dog.jpg" alt="dog" class="hidden">
+    <div class="test-btns hidden">
+      <button class="test-btn" data-correct="true">Low</button>
+      <button class="test-btn" data-correct="false">High</button>
+    </div>
+  </section>
+
+  <section id="page5" class="split">
+    <div class="left-content">
+      <h2 class="hidden">shutterspeed</h2>
+      <p class="big-text hidden">
+        Aperture, the opening in a camera lens, controls light entry and depth of field: a large aperture (small f-stop
+        number) allows more light and creates a shallow depth of field, ideal for highlighting subjects with blurred
+        backgrounds; a medium aperture offers a balance, suitable for general photography with moderately focused
+        backgrounds; and a small aperture (large f-stop number) limits light entry but provides a deep depth of field,
+        perfect for detailed landscape shots.
+      </p>
+    </div>
+    <div class="right-content slider">
+      <img id="shutter-speed-img" src="img/shutterspeed.jpg" alt="placeholder">
+      <div class="slider-buttons shutter-group">
+        <button class="shutter-speed-button active-btn" data-img-src="img/shutterspeed.jpg">1/5s</button>
+        <button class="shutter-speed-button" data-img-src="img/shutterspeed-1.jpg">1/500s</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="page6" class="test">
+    <h2 class="titel-center hidden">fast or slow shutterspeed?</h2>
+    <img src="img/low-shutter.jpg" alt="woman" class="hidden">
+    <div class="test-btns hidden">
+      <button class="test-btn" data-correct="false">fast</button>
+      <button class="test-btn" data-correct="true">slow</button>
+    </div>
+  </section>
+
+  <section id="page7" class="split">
+    <div class="left-content">
+      <h2 class="hidden">ISO</h2>
+      <p class="big-text hidden">
+        If you need more light but can't go lower with you're aperture and/or shutter speed, increase
+        your ISO. This adjusts the sensor's sensitivity to light. However, higher ISO brings more noise, degrading image
+        quality. So, keep ISO as low as possible for clean images. <br><br> How far you can push ISO depends on your
+        camera, so do some tests at different settings to see how your camera performs.
+      </p>
+
+      <p class="figcap hidden">The image on the right is zoomed in to show the effect of noise. <br>Use the buttons to
+        see how the noise is increasing at higher ISO settings.</p>
+    </div>
+    <div class="right-content slider">
+      <img id="iso-img" src="img/iso-1.jpg" alt="placeholder">
+      <div class="slider-buttons iso-group">
+        <button class="iso-button active-btn" data-img-src="img/iso-1.jpg">ISO <br> 200</button>
+        <button class="iso-button" data-img-src="img/iso-2.jpg">ISO <br> 1600</button>
+        <button class="iso-button" data-img-src="img/iso-3.jpg">ISO <br> 6400</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="page8" class="test">
+    <h2 class="titel-center hidden">low or high iso?</h2>
+    <img src="img/train.jpg" alt="dog" class="hidden">
+    <div class="test-btns hidden">
+      <button class="test-btn" data-correct="false">Low</button>
+      <button class="test-btn" data-correct="true">High</button>
+    </div>
+  </section>
+
+  <section id="page9">
+    <div class="center">
+      <h2 class="titel-center hidden">That's it!</h2>
+      <p class="big-text hidden">Now go out and experiment with your camera!</p>
+    </div>
+
+  </section>
+
+  <aside id="btns">
+    <a href="#" id="prevBtn"><img src="img/up-arrow.png" alt="up arrow"></a>
+    <a href="#" id="nextBtn"><img src="img/down-arrow.png" alt="down arrow"></a>
+  </aside>
+</body>
+
+</html>
