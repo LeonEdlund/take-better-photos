@@ -99,7 +99,7 @@ function checkArrows() {
 }
 
 function arrowShadow() {
-  let whitePages = [2, 3];
+  let whitePages = [2, 3, 5];
   if (whitePages.includes(pageIx)) {
     prevBtn.classList.add("drop-shadow");
     nextBtn.classList.add("drop-shadow");
