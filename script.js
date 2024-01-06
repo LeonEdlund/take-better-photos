@@ -85,6 +85,7 @@ function showPage(buttonId) {
   checkArrows();
   arrowShadow();
   updateMenu();
+  endSound();
 }
 
 function checkArrows() {
@@ -281,4 +282,13 @@ function correctAnswerSound(correct) {
     }
   }
 }
+
+let hasPlayed = false; 
+function endSound() {
+  if (isSoundOn && pageIx == pages.length && !hasPlayed) {
+    correctAnswer.play();
+    hasPlayed = true;
+  }
+}
+
 /* ---------------------------------------------------------- */
