@@ -53,19 +53,28 @@ button {
   transition: all 200ms ease-in;
 }
 
-/* button:hover {
-  transform: scale(1.05);
-} */
-
 .listen {
   font-size: 1.4rem;
   text-transform: uppercase;
   border: 1px solid black;
   background-color: rgb(197, 197, 197);
-  padding: 10px;
-  width: min-content;
-  margin-top: 2em;
+  padding: 0.5em;
   border-radius: 8px;
+
+  position: absolute;
+  bottom: 33%;
+  transform: translateY(-50%);
+}
+
+.listen:hover {
+  transform: scale(1.08);
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+}
+
+.listen:active {
+  transform: scale(1);
 }
 
 .iso-button,

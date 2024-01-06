@@ -85,7 +85,7 @@ function showPage(buttonId) {
   checkArrows();
   arrowShadow();
   updateMenu();
-  endSound();
+  // endSound();
 }
 
 function checkArrows() {
@@ -261,13 +261,26 @@ let soundBtn = document.querySelector("#sound");
 let isSoundOn = true;
 const soundOff = "img/icons/sound-off.svg";
 const soundOn = "img/icons/sound-on.svg";
-const buttonSound = new Audio("sounds/page.wav");
+const listenBtn = document.querySelector(".listen");
+
 let correctAnswer = new Audio("../sounds/correct_answer.mp3");
 let wrongAnswer = new Audio("../sounds/wrong_answer.mp3");
+let endingSound = new Audio("../sounds/ending_sound.mp3")
+
 
 soundBtn.addEventListener("click", function () {
   isSoundOn = !isSoundOn;
   soundBtn.src = isSoundOn ? soundOn : soundOff;
+});
+
+listenBtn.addEventListener("click", function () {
+  if (isSoundOn) {
+    endingSound.play();
+
+    setTimeout(function () {
+      listenBtn.innerText = "play again";
+    }, 5500); // 1000 milliseconds = 1 second
+  }
 });
 
 function correctAnswerSound(correct) {
@@ -283,12 +296,12 @@ function correctAnswerSound(correct) {
   }
 }
 
-let hasPlayed = false; 
-function endSound() {
-  if (isSoundOn && pageIx == pages.length && !hasPlayed) {
-    correctAnswer.play();
-    hasPlayed = true;
-  }
-}
+// let hasPlayed = false; 
+// function endSound() {
+//   if (isSoundOn && pageIx == pages.length && !hasPlayed) {
+//     endingSound.play();
+//     hasPlayed = true;
+//   }
+// }
 
 /* ---------------------------------------------------------- */
