@@ -276,7 +276,6 @@ soundBtn.addEventListener("click", function () {
 listenBtn.addEventListener("click", function () {
   if (isSoundOn) {
     endingSound.play();
-
     setTimeout(function () {
       listenBtn.innerText = "play again";
     }, 5500); // 1000 milliseconds = 1 second
