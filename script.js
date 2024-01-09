@@ -17,7 +17,6 @@ window.addEventListener("mousemove", function (e) {
 });
 
 // POINTER
-// Apply event listeners
 clickElems.forEach((elem) => {
   elem.addEventListener("mouseenter", clickCursor);
   elem.addEventListener("mouseleave", normalCursor);
@@ -54,10 +53,8 @@ nextBtn.addEventListener("click", () => showPage("nextBtn"));
 
 document.addEventListener("keydown", function (event) {
   if (event.key === "ArrowUp") {
-    // Simulate a click on the prevBtn
     showPage("prevBtn");
   } else if (event.key === "ArrowDown") {
-    // Simulate a click on the nextBtn
     showPage("nextBtn");
   }
 });
